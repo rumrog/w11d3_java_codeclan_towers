@@ -9,5 +9,8 @@
         <module name="w11d3_java_codeclan_towers" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="w11d3_java_codeclan_towers" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
 </project>
