@@ -3,6 +3,9 @@ import org.junit.Test;
 
 import java.util.ArrayList;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+
 public class HotelTest {
 
     private Hotel hotel;
@@ -39,6 +42,13 @@ public class HotelTest {
         guest5 = new Guest("John");
     }
 
-//    @Test
+    @Test
+    public void canCheckInGuestToBedroom(){
+        assertEquals(true, hotel.checkInGuestToBedroom(guest1, bedroom1));
+    }
 
+    @Test
+    public void canCheckOutGuestFromBedroom(){
+        assertFalse(hotel.checkOutGuestFromBedroom(guest1, bedroom1));
+    }
 }

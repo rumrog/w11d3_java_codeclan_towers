@@ -14,4 +14,8 @@ public class Hotel {
         return bedroom.addGuest(guest);
     }
 
+    public boolean checkOutGuestFromBedroom(Guest guest, Bedroom bedroom){
+        return bedroom.removeGuest(guest);
+    }
+
 }

@@ -4,6 +4,7 @@ import org.junit.Test;
 import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 
 public class BedroomTest {
 
@@ -57,5 +58,17 @@ public class BedroomTest {
         this.bedroom.addGuest(guest3);
         this.bedroom.addGuest(guest4);
         assertEquals(false, this.bedroom.addGuest(guest5));
+    }
+
+    @Test
+    public void canRemoveGuest(){
+        this.bedroom.addGuest(guest1);
+        assertFalse(!this.bedroom.removeGuest(guest1));
+    }
+
+    @Test
+    public void cannotRemoveGuest(){
+        this.bedroom.addGuest(guest1);
+        assertFalse(this.bedroom.removeGuest(guest2));
     }
 }

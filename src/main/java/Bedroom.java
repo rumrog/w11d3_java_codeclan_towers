@@ -38,6 +38,15 @@ public class Bedroom {
         return false;
     }
 
+    public boolean removeGuest(Guest guest) {
+        if (this.guestCollection.contains(guest)) {
+            int index = this.guestCollection.indexOf(guest);
+            this.guestCollection.remove(index);
+            return true;
+        }
+        return false;
+    }
+
 
 
 
