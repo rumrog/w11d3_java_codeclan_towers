@@ -4,13 +4,13 @@ public class Bedroom {
 
     private int roomNumber;
     private int capacity;
-    private ArrayList<Guest> guestsCollection;
+    private ArrayList<Guest> guestCollection;
     private double price;
 
     public Bedroom(int roomNumber, int capacity, double price) {
         this.roomNumber = roomNumber;
         this.capacity = capacity;
-        this.guestsCollection = new ArrayList<Guest>();
+        this.guestCollection = new ArrayList<Guest>();
         this.price = price;
     }
 
@@ -23,7 +23,7 @@ public class Bedroom {
     }
 
     public int getGuestCount() {
-        return this.guestsCollection.size();
+        return this.guestCollection.size();
     }
 
     public double getPrice() {
@@ -32,7 +32,7 @@ public class Bedroom {
 
     public boolean addGuest(Guest guest) {
         if (this.getGuestCount() < this.capacity) {
-            this.guestsCollection.add(guest);
+            this.guestCollection.add(guest);
             return true;
         }
         return false;
