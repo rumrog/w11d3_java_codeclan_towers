@@ -65,4 +65,9 @@ public class HotelTest {
     public void canGetCapacityHash() {
         assertEquals(2, hotel.getBedroomsGroupedByCapacity().size());
     }
+
+    @Test
+    public void canGetCapacityHash2() {
+        assertEquals(2, hotel.getBedroomsGroupedByCapacity2().size());
+    }
 }

@@ -59,16 +59,13 @@ public class Hotel {
             ArrayList<Bedroom> capacityArrayListValue = new ArrayList<Bedroom>();
             capacityArrayListValue.add(bedroom);
 
-            bedroomCapacityHash.merge(key, capacityArrayListValue,(prev, room) ->
-                    prev.add(bedroom)
-
-            );
-
-                }
-        );
-        System.out.println(bedroomCapacityHash);
-
+            bedroomCapacityHash.merge(key, capacityArrayListValue,(existingArr, room) -> {
+                ArrayList<Bedroom> existingBedrooms = existingArr;
+                existingBedrooms.add(bedroom);
+                return existingBedrooms;
+            });
+        });
         return bedroomCapacityHash;
     }
-
+// Good Job!
 }
